@@ -1,0 +1,42 @@
+{
+  "actions": [
+    {
+      "description": "Launch the action.",
+      "name": "LaunchAction",
+      "intent": {
+        "name": "actions.intent.MAIN"
+      },
+      "fulfillment": {
+        "conversationName": "exampleconversation"
+      }
+    },
+    {
+      "description": "Tells current weather of the city.",
+      "name": "FetchWeatherAction",
+      "intent": {
+        "name": "FetchWeatherIntent",
+        "parameters": [
+          {
+            "name": "city",
+            "type": "SchemaOrg_Place"
+          }
+        ],
+        "trigger": {
+          "queryPatterns": [
+            "tell me the weather in $SchemaOrg_Place:city"
+          ]
+        }
+      },
+      "fulfillment": {
+        "conversationName": "exampleconversation"
+      }
+    }
+  ],
+  "conversations": {
+    "exampleconversation": {
+      "name": "exampleconversation",
+      "url": "https://us-central1-actions-on-caaac.cloudfunctions.net/action"
+    }
+  },
+  "locale": "en"
+}
