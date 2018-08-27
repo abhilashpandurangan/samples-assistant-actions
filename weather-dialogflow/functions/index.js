@@ -20,7 +20,7 @@ exports.action = functions.https.onRequest((request, response) => {
                 app.tell(`${city} is cleary.`);
                 break;
             default:
-                app.tell('Since I\'m still having trouble, so I\'ll stop here. Let’s play again soon.');
+                app.tell('Since I\'m still having trouble. Let’s play again soon.');
                 break;
         }
     }
