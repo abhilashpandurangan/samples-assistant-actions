@@ -2,7 +2,7 @@
 
 This is an action that tells current weather of the city by using the Dialogflow.
 
-# Getting Started
+# Getting Stated
 
 ## Create the developer project and Dialogflow agent
 
