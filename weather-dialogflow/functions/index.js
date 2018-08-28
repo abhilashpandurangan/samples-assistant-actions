@@ -18,6 +18,7 @@ exports.action = functions.https.onRequest((request, response) => {
             case FETCH_WEATHER:
                 let city = app.getArgument(CITY_ARGUMENT);
                 app.tell(`${city} is cleary.`);
+
 				conv.ask(new BasicCard({
   text: `This is a basic card.  Text in a basic card can include "quotes" and
   most other unicode characters including emoji .  Basic cards also support
@@ -37,6 +38,9 @@ exports.action = functions.https.onRequest((request, response) => {
   }),
   display: 'CROPPED',
 }));
+
+				
+
                 break;
             default:
                 app.tell('Since I\'m still having trouble. Let’s play again soon. Bye!');
